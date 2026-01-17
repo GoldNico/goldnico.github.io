@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.dynamic-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(25deg, #ff6b6b 0%, #ffa500 25%, #ffd93d 50%, #ff6b6b 75%, #c71585 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 45s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.particle {
+    position: absolute;
+    background-color: #39ff14;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite, particleColor 3s ease-in-out infinite;
+    box-shadow: 0 0 8px #ffffff;
+}
+
+@keyframes particleColor {
+    0%, 100% {
+        background-color: #39ff14;
+    }
+    50% {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Removed control buttons as per requirement for auto-loop */
