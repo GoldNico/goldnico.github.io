@@ -3,9 +3,9 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/goldnico.github.io/',
+  base: '/',
   build: {
-    outDir: 'dist',
+    outDir: '.',
     assetsDir: 'assets'
   }
 })
