@@ -42,10 +42,10 @@ body, html {
 
 @keyframes particleColor {
     0%, 100% {
-        background-color: #39ff14;
+        background-color: #fbfbfb;
     }
     50% {
-        background-color: #ffffff;
+        background-color: #e3dff9;
     }
 }
 
